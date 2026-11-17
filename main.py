@@ -57,7 +57,7 @@ def main():
         path = Path(args.database).expanduser().resolve()
         if not path.is_file():
             parser.error("database file does not exist: " + str(path))
-        uri = "file:" + path.as_posix() + "?mode=ro"
+        uri = path.as_uri() + "?mode=ro"
         try:
             connection = sqlite3.connect(uri, uri=True)
         except sqlite3.Error as exc:
