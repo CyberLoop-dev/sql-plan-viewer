@@ -1,0 +1,1 @@
+# No third-party dependencies; sqlite3 is included with Python.
